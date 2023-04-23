@@ -193,9 +193,7 @@ Pair * nextTreeMap(TreeMap * tree) {
     }
     current = parent;
   }
-  if(current != NULL){
-    return current->pair;
-  }
+  tree->current = current;
   
-  return NULL;
+  return if(current != NULL) current->pair : NULL;
 }
