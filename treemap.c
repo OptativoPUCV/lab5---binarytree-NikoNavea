@@ -160,7 +160,16 @@ Pair * upperBound(TreeMap * tree, void* key) {
 }
 
 Pair * firstTreeMap(TreeMap * tree) {
-    return NULL;
+  if (tree == NULL) exit(EXIT_FAILURE);
+  TreeNode* current = tree->root;
+  
+  while (current->left != NULL){
+    current = current->left;
+  }
+  tree->current = current->left;
+  
+  
+  return tree->current->pair;
 }
 
 Pair * nextTreeMap(TreeMap * tree) {
