@@ -174,7 +174,7 @@ Pair * firstTreeMap(TreeMap * tree) {
 }
 
 Pair * nextTreeMap(TreeMap * tree) {
-  if (tree == NULL || tree->current == NULL) exit(EXIT_FAILURE);
+  if (tree == NULL || tree->current == NULL) return NULL;
   
   TreeNode* current = tree->current;
 
@@ -188,12 +188,12 @@ Pair * nextTreeMap(TreeMap * tree) {
   else{
     TreeNode* parent = current->parent;
     while(parent != NULL && current == parent->right){
-      current = parent->right;
-      parent = current->parent;
+      current = parent;
+      parent = parent->parent;
     }
     current = parent;
   }
   tree->current = current;
   
-  return (current != NULL) current->pair : NULL;
+  return (current != NULL) ? current->pair : NULL;
 }

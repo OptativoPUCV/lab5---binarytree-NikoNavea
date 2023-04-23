@@ -239,3 +239,9 @@ treemap.c:198:27: error: expected ‘;’ before ‘current’
 cc1: all warnings being treated as errors
 Compilation failed
 68b810d
+Sun 23 Apr 2023 01:49:02 AM UTC: 
+ treemap.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+ tests:  25|1
+total_score: 60/70
+af7ae88
