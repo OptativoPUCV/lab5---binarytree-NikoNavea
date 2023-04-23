@@ -156,6 +156,10 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
 
 
 Pair * upperBound(TreeMap * tree, void* key) {
+  if(tree == NULL) return NULL;
+  if(is_equal(tree, tree->root->pair->key, key)){
+    return tree->root->pair;
+  }
   
   return NULL;
 }
